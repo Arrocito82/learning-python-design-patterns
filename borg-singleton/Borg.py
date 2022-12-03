@@ -14,3 +14,6 @@ class Borg(object):
         
 class Child(Borg):
     pass
+
+class AnotherChild(Borg):
+    _shared_state={}

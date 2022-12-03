@@ -1,4 +1,4 @@
-from Borg import Borg, Child
+from Borg import Borg, Child, AnotherChild
 borg = Borg()
 another_borg = Borg()
 print(borg is another_borg) # son diferentes instancias
@@ -18,3 +18,15 @@ print(child2.only_one_var)
 print(child.only_one_var) 
 print(borg.only_one_var) 
 print(another_borg.only_one_var) 
+
+# ahora si no quisieramos un estado compartido
+child3=AnotherChild()
+# ya no se comparte el estado
+print(child3.only_one_var) 
+
+'''
+Traceback (most recent call last):
+  File "/home/andrea/learning-python-design-patterns/borg-singleton/main.py", line 24, in <module>
+    print(child3.only_one_var) 
+AttributeError: 'AnotherChild' object has no attribute 'only_one_var'
+'''
