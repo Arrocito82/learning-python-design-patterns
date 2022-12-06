@@ -1,2 +1,5 @@
-# learning-python-design-patterns
-Learning Python Design Patterns
+# Learning Python Design Patterns
+```
+$ python --version
+Python 2.7.18
+```
